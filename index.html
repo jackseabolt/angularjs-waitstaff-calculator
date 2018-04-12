@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Multiplication Table</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="icon" href="favicon.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" type="text/javascript"></script>
 </head>
 <body ng-app="">
@@ -35,7 +36,7 @@
                     <p>Meal count: {{ mealcount }}</p>
                     <p>Average Tip: {{ averageTip | currency }}</p>
                 </div>
-                <div class="transaction dark half-right-inner " ng-if="total"> 
+                <div class="transaction dark half-right-inner half-right-inner-bottom" ng-if="total"> 
                         <h3>Customer Charges</h3>
                         <p>{{ subtotal | currency }} + {{ displayTip | currency }} = <strong>{{ total | currency }}</strong></p>
                 </div>

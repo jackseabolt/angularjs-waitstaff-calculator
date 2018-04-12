@@ -9,6 +9,7 @@ body {
     margin: 0px; 
     padding: 50px; 
     height: 100%; 
+    border-radius: 5px; 
 }
 
 .dark {
@@ -19,7 +20,11 @@ body {
 .half-right-inner {
     width: calc(100% - 100px);
     padding: 50px; 
-    margin: 0px; 
+    border-radius: 5px; 
+}
+
+.half-right-inner-bottom {
+    margin-top: 30px !important; 
 }
 
 .half-right {
@@ -78,7 +83,7 @@ button:hover {
     align-items: top; 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
     .container {
         display: block; 
         width: 100%; 
@@ -93,5 +98,11 @@ button:hover {
     .half {
         display: block;
         width: calc(100% - 100px);  
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 20px;
     }
 }
