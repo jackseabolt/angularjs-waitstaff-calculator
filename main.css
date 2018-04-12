@@ -1,0 +1,97 @@
+body {
+    padding: 100px;
+    background-color: rgb(54, 54, 54);  
+}
+
+.half {
+    display: inline-block; 
+    width: calc(48% - 100px); 
+    margin: 0px; 
+    padding: 50px; 
+    height: 100%; 
+}
+
+.dark {
+    background-color: rgb(27, 27, 27); 
+    color: white; 
+}
+
+.half-right-inner {
+    width: calc(100% - 100px);
+    padding: 50px; 
+    margin: 0px; 
+}
+
+.half-right {
+    display: inline-block; 
+    margin-left: 4%;
+    width: 48%; 
+    padding: 0px;  
+}
+
+.app h1 {
+    text-align: center; 
+    color: white; 
+}
+
+h1, h2, h3, p {
+    font-family: arial; 
+}
+
+.transaction {
+    margin-top: 50px; 
+}
+
+.error {
+    color: rgb(206, 75, 75); 
+    font-size: 16px; 
+    margin-bottom: 10px; 
+    margin-top: 0px; 
+}
+
+input { 
+    padding: 10px 15px; 
+    width: calc(100% - 30px); 
+    border: 0px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    margin-bottom: 20px; 
+}
+
+button {
+    padding: 13px 30px; 
+    background-color: rgb(27, 27, 27); 
+    border: 3px solid rgb(255, 217, 0); 
+    color: rgb(255, 217, 0); 
+    font-size: 16px; 
+    transition: 0.3s;
+    cursor: pointer;  
+}
+
+button:hover {
+    background-color: rgb(255, 217, 0); 
+    color: white; 
+}
+
+.container {
+    display: flex; 
+    align-items: top; 
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        display: block; 
+        width: 100%; 
+    }
+    .half-right {
+        display: block;
+        margin-left: 0px; 
+        width: 100%; 
+        margin-top: 30px;  
+    }
+
+    .half {
+        display: block;
+        width: calc(100% - 100px);  
+    }
+}
