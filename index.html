@@ -16,12 +16,10 @@
                         <p class="error" ng-if="myForm.base.$error.pattern">Base must be a number</p>
                         <input type="text" name="base" ng-model="data.base" ng-pattern="/[0-9]/" placeholder="Base price"/>
                     </div>
-
                     <div>
                         <p class="error" ng-if="myForm.tax.$error.pattern">Tax rate must be a number</p>
                         <input type="text" name="tax" ng-model="data.taxRate" ng-pattern="/[0-9]/" placeholder="Tax rate" />
                     </div>
-
                     <div>
                         <p class="error" ng-if="myForm.tip.$error.pattern">Tip percentage must be a number</p>
                         <input type="text" name="tip" ng-model="data.tip" ng-pattern="/[0-9]/" placeholder="Tip"/>
