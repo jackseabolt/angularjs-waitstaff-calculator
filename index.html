@@ -10,7 +10,7 @@
 <body ng-app="">
     <header>
 
-        <h2><span style="font-weight: 800;">Waiter</span><span style="font-weight: 40;">Dock</span></h2>
+        <h2><span style="font-weight: 800;">Waiter</span><span style="font-weight: 40;">Dock</span><img src="logo.png" alt="logo" width="32px" id="logo" /></h2>
     </header>
     <div class="app" ng-controller="myCtrl">
         <div class="container">
@@ -48,7 +48,7 @@
                     <div class="half-bottom-right">
                         <p>Tip Total: {{ tiptotal | currency }}</p>
                         <p>Meal count: {{ mealcount }}</p>
-                        <p>Average Tip: {{ averageTip | currency }}</p>
+                        <p ng-if="averageTip">Average Tip: {{ averageTip | currency }}</p>
                         <p class="details" ng-if="total" ng-click="toggleDetails()">Details</p>
                     </div>
                 </div>
