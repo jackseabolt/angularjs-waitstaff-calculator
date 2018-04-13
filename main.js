@@ -2,7 +2,8 @@ angular.module('myApp', [])
     .controller('myCtrl', function($scope) {
         $scope.error = null; 
         $scope.tiptotal = 0; 
-        $scope.mealcount = 0; 
+        $scope.mealcount = 0;
+        $scope.details = false;  
         $scope.averageTip = null;  
         $scope.submit = function() {
             console.log($scope.data)
@@ -13,5 +14,14 @@ angular.module('myApp', [])
             $scope.tiptotal = $scope.tiptotal + $scope.displayTip; 
             $scope.mealcount++; 
             $scope.averageTip = ($scope.averageTip + $scope.displayTip)/$scope.mealcount; 
+        }
+        $scope.reset = function() {
+            $scope.tiptotal = 0; 
+            $scope.mealcount = 0; 
+            $scope.averageTip = null; 
+            $scope.total = null; 
+        }
+        $scope.toggleDetails = function() {
+            $scope.details = !$scope.details; 
         }
     })

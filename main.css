@@ -71,6 +71,23 @@ button {
     font-size: 16px; 
     transition: 0.3s;
     cursor: pointer;  
+    margin-right: 10px; 
+}
+
+.total {
+    margin-top: 30px;
+    color: rgb(192, 192, 192);  
+}
+
+.details {
+    text-decoration: underline;
+    cursor: pointer; 
+    transition: 0.3s; 
+    margin-top: 20px;  
+}
+
+.details:hover {
+    color: rgb(187, 187, 187); 
 }
 
 button:hover {
