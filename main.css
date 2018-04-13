@@ -136,7 +136,7 @@ button {
 
 .total {
     margin-top: 30px;
-    color: rgb(192, 192, 192);  
+    color: rgb(206, 75, 75);   
 }
 
 .details {
@@ -158,6 +158,11 @@ button:hover {
 .container {
     display: flex; 
     align-items: top; 
+}
+
+.welcome-container {
+    display: flex; 
+    align-items: center; 
 }
 
 @media screen and (max-width: 950px) {
