@@ -20,6 +20,7 @@ angular.module('myApp', [])
             $scope.mealcount = 0; 
             $scope.averageTip = null; 
             $scope.total = null; 
+            $scope.details = false; 
         }
         $scope.toggleDetails = function() {
             $scope.details = !$scope.details; 

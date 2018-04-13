@@ -1,15 +1,45 @@
 body {
-    padding: 100px;
     background-color: rgb(54, 54, 54);  
+    margin: 0px; 
+}
+
+header {
+    position: fixed; 
+    background-color: black; 
+    padding: 20px 50px; 
+    width: 100%; 
+    color: white; 
+}
+
+header h1 {
+    margin: 0px; 
+    padding: 0px; 
 }
 
 .half {
     display: inline-block; 
-    width: calc(48% - 100px); 
+    width: calc(48%); 
     margin: 0px; 
-    padding: 50px; 
+    padding: 0px; 
     height: 100%; 
     border-radius: 5px; 
+    overflow: hidden; 
+}
+
+.half-top {
+    width: calc(100% - 100px); 
+    padding: 10px 50px; 
+    background-color: rgb(36, 36, 36); 
+}
+
+.half-bottom {
+    width: calc(100% - 100px); 
+    padding: 50px; 
+}
+
+.half-bottom-right {
+    width: calc(100% - 100px); 
+    padding: 30px 50px; 
 }
 
 .dark {
@@ -18,9 +48,9 @@ body {
 }
 
 .half-right-inner {
-    width: calc(100% - 100px);
-    padding: 50px; 
-    border-radius: 5px; 
+    width: 100%; 
+    border-radius: 5px;
+    overflow: hidden;  
 }
 
 .half-right-inner-bottom {
@@ -34,6 +64,9 @@ body {
     padding: 0px;  
 }
 
+.app {
+    padding: 160px 100px;
+}
 .app h1 {
     text-align: center; 
     color: white; 
@@ -71,7 +104,8 @@ button {
     font-size: 16px; 
     transition: 0.3s;
     cursor: pointer;  
-    margin-right: 10px; 
+    margin-right: 10px;
+    margin-top: 20px;  
 }
 
 .total {
@@ -111,15 +145,14 @@ button:hover {
         width: 100%; 
         margin-top: 30px;  
     }
-
     .half {
         display: block;
-        width: calc(100% - 100px);  
+        width: calc(100%);  
     }
 }
 
 @media screen and (max-width: 600px) {
-    body {
-        padding: 20px;
+    .app {
+        padding: 130px 20px;
     }
 }

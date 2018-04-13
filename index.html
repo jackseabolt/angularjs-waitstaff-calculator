@@ -8,43 +8,59 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" type="text/javascript"></script>
 </head>
 <body ng-app="">
+    <header>
+
+        <h2><span style="font-weight: 800;">Waiter</span><span style="font-weight: 40;">Dock</span></h2>
+    </header>
     <div class="app" ng-controller="myCtrl">
         <div class="container">
             <div class="half dark">
-                <h3>Enter Meal Details</h3>
-                <form name="myForm" ng-submit="submit()">
-                    <div>
-                        <p class="error" ng-if="myForm.base.$error.pattern">Base must be a number</p>
-                        <input type="text" name="base" ng-model="data.base" ng-pattern="/[0-9]/" 
-                            placeholder="Base price" required />
-                    </div>
-                    <div>
-                        <p class="error" ng-if="myForm.tax.$error.pattern">Tax rate must be a number</p>
-                        <input type="text" name="tax" ng-model="data.taxRate" ng-pattern="/[0-9]/" 
-                            placeholder="Tax rate" required  />
-                    </div>
-                    <div>
-                        <p class="error" ng-if="myForm.tip.$error.pattern">Tip percentage must be a number</p>
-                        <input type="text" name="tip" ng-model="data.tip" ng-pattern="/[0-9]/" 
-                            placeholder="Tip" required />
-                    </div>
+                <div class="half-top">
+                    <h3>Enter Meal Details</h3>
+                </div>
+                <div class="half-bottom">
+                    <form name="myForm" ng-submit="submit()">
+                        <div>
+                            <p class="error" ng-if="myForm.base.$error.pattern">Base must be a number</p>
+                            <input type="text" name="base" ng-model="data.base" ng-pattern="/[0-9]/" 
+                                placeholder="Base price" required />
+                        </div>
+                        <div>
+                            <p class="error" ng-if="myForm.tax.$error.pattern">Tax rate must be a number</p>
+                            <input type="text" name="tax" ng-model="data.taxRate" ng-pattern="/[0-9]/" 
+                                placeholder="Tax rate" required  />
+                        </div>
+                        <div>
+                            <p class="error" ng-if="myForm.tip.$error.pattern">Tip percentage must be a number</p>
+                            <input type="text" name="tip" ng-model="data.tip" ng-pattern="/[0-9]/" 
+                                placeholder="Tip" required />
+                        </div>
 
-                    <button type="submit">Submit</button><button ng-click="reset()">Reset</button>
-                </form>
+                        <button type="submit">Submit</button><button ng-click="reset()">Reset</button>
+                    </form>
+                </div>
             </div>
             <div class="half-right">
                 <div class="dark half-right-inner "> 
-                    <h3>My Earnings Information</h3>
-                    <p>Tip Total: {{ tiptotal | currency }}</p>
-                    <p>Meal count: {{ mealcount }}</p>
-                    <p>Average Tip: {{ averageTip | currency }}</p>
-                    <p class="details" ng-if="total" ng-click="toggleDetails()">Details</p>
+                    <div class="half-top">
+                        <h3>My Earnings Information</h3>
+                    </div>
+                    <div class="half-bottom-right">
+                        <p>Tip Total: {{ tiptotal | currency }}</p>
+                        <p>Meal count: {{ mealcount }}</p>
+                        <p>Average Tip: {{ averageTip | currency }}</p>
+                        <p class="details" ng-if="total" ng-click="toggleDetails()">Details</p>
+                    </div>
                 </div>
                 <div class="transaction dark half-right-inner half-right-inner-bottom" ng-if="details"> 
+                    <div class="half-top">    
                         <h3>Last Transaction</h3>
+                    </div>
+                    <div class="half-bottom-right">
                         <p>Subtotal: {{ subtotal | currency }} </p>
                         <p>Tip: {{ displayTip | currency }}</p>
                         <p class="total"><b>{{ subtotal | currency }} + {{ displayTip | currency }} = {{ total | currency }}</b></p>
+                    </div>
                 </div>
             </div>
         </div>
