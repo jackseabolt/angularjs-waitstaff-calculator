@@ -66,6 +66,9 @@ header h1 {
 
 .app {
     padding: 160px 100px;
+    max-width: 1000px; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 .app h1 {
     text-align: center; 
