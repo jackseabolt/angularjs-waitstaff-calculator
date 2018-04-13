@@ -139,6 +139,14 @@ button {
     color: rgb(206, 75, 75);   
 }
 
+.loading {
+    opacity: 0; 
+}
+
+.loaded {
+    opacity: 1; 
+}
+
 .details {
     text-decoration: underline;
     cursor: pointer; 
@@ -155,15 +163,27 @@ button:hover {
     color: white; 
 }
 
-.container {
-    display: flex; 
-    align-items: top; 
-}
-
 .welcome-container {
     margin-top: 50px; 
     display: flex; 
     align-items: center; 
+    transition: all linear 0.5s; 
+}
+
+.container {
+    display: flex; 
+    align-items: top; 
+    transition: all linear 0.5s; 
+}
+
+.container.ng-enter,
+.container.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.container.ng-leave,
+.container.ng-enter.ng-enter-active {
+  opacity: 1; 
 }
 
 @media screen and (max-width: 950px) {
