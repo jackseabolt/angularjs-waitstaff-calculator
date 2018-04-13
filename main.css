@@ -11,6 +11,11 @@ header {
     color: white; 
 }
 
+h1, h2 {
+    line-height: 90%; 
+    color: white; 
+}
+
 header h1 {
     margin: 0px; 
     padding: 0px; 
@@ -30,6 +35,18 @@ header h1 {
     height: 100%; 
     border-radius: 5px; 
     overflow: hidden; 
+}
+
+#welcome {
+    display: block;  
+    border-radius: 5px; 
+    height: 100%; 
+    overflow: hidden;
+    background-color: rgb(27, 27, 27); 
+    width: 350px; 
+    padding: 100px 100px;  
+    text-align: center; 
+    margin: 0px auto; 
 }
 
 .half-top {

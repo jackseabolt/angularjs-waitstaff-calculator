@@ -4,7 +4,8 @@ angular.module('myApp', [])
         $scope.tiptotal = 0; 
         $scope.mealcount = 0;
         $scope.details = false;  
-        $scope.averageTip = null;  
+        $scope.averageTip = null; 
+        $scope.started = false;  
         $scope.submit = function() {
             console.log($scope.data)
             $scope.subtotal = parseFloat($scope.data.base) + (parseFloat($scope.data.base) * (parseFloat($scope.data.taxRate) * 0.01 )); 
@@ -20,7 +21,11 @@ angular.module('myApp', [])
             $scope.mealcount = 0; 
             $scope.averageTip = null; 
             $scope.total = null; 
-            $scope.details = false; 
+            $scope.details = null; 
+        }
+        $scope.startApp = function() {
+            console.log("hi")
+            $scope.started = true; 
         }
         $scope.toggleDetails = function() {
             $scope.details = !$scope.details; 
